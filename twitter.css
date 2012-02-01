@@ -1,0 +1,17 @@
+/* The usual Promotional stuff no one wants */
+
+.promo{
+	display:none !important;
+}
+
+.definition{
+	display:none !important;
+}
+
+.component .definition + hr{
+	display:none !important;
+}
+
+.promoted-trend{
+	display:none !important;
+}

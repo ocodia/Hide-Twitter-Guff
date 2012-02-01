@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Hide Twitter Guff: Options</title>
+	<script type="text/javascript" src="options.js"></script>
+	<link rel="stylesheet" href="options.css" type="text/css" charset="utf-8" />
+</head>
+<body onload="loadOptions()">
+	<div id="content">
+		
+		<div align="center"><img src="twit128.png" title="Hide Twitter Guff"/></div>
+		
+		<h1>Hide Twitter Guff</h1>
+  		<p>You can choose which Guff you'd like to hide (everything is hidden by default).</p>
+		<p>I haven't provided an option to show/hide the promotional stuff or the Twitter definitions... I figured no one was interested in <strong>that</strong> guff.</p>
+
+  		<div class="option_row">
+  			<div class="option_name">
+  				<label for="whotofollow">Who To Follow:</label>
+			</div>
+  			<div class="option_picker">
+  				<select id="whotofollow">
+					<option value="show">Show</option>
+					<option value="hide">Hide</option>
+				</select>
+  			</div>
+    	</div>
+    
+    	<div class="option_row">
+  			<div class="option_name">
+    			<label for="trends">Trends:</label>
+			</div>
+			<div class="option_picker">
+  				<select id="trends">
+					<option value="show">Show</option>					
+					<option value="hide">Hide</option>
+				</select>
+  			</div>
+    	</div>
+	
+		<div class="buttons">
+			<button onclick="saveOptions()">Save my preferences</button>
+		</div>
+            
+		<div id="msg" style="visibility: hidden;">Preferences Saved!</div>
+	</div>
+
+	<div class="footer">
+		<a href="http://github.com/happenchance/Hide-Twitter-Guff">Source Code &amp; Issue Tracker (Github)</a><br/> Paul Livingstone 2010
+	</div>
+</body>
+</html>
