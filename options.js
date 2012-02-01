@@ -4,30 +4,35 @@
 
 function loadOptions() {
   
-    var bkg = chrome.extension.getBackgroundPage();
+  // Load up the background page
+  var bkg = chrome.extension.getBackgroundPage();
   
-  	// declare the SHOW variables and get their values from LocalStorage
+  // declare the SHOW variables and get their values from LocalStorage
 	var showWTF = bkg.getItem("showWTF");
-	var showTRENDS = bkg.getItem("showTRENDS");
+    var showTRENDS = bkg.getItem("showTRENDS");
+
   
-  	// the default setting is to hide the elements
-  	var defaultSetting = "hide";
+  // the default setting is to hide the elements
+  var defaultSetting = "hide";
   
 	// Set up the defaults if no values are present in LocalStorage
 	if (showWTF == undefined || showTRENDS == undefined) {
-	
-	bkg.setItem("showWTF", defaultSetting);
-	bkg.setItem("showTRENDS", defaultSetting);
-    
-	showWTF = bkg.getItem("showWTF");
-	showTRENDS = bkg.getItem("showTRENDS");
+		// if undefined, set to defaults
+        bkg.setItem("showWTF", defaultSetting);
+		bkg.setItem("showTRENDS", defaultSetting);
+
+    // retrieve them from the localstore
+    showWTF = bkg.getItem("showWTF");
+    showTRENDS = bkg.getItem("showTRENDS");
+
 	}
   
-  	// get the options form elements
-  	var wtf = document.getElementById("whotofollow");
-  	var trends = document.getElementById("trends");
+  // get the options form elements
+  var wtf = document.getElementById("whotofollow");
+  var trends = document.getElementById("trends");
+
   
-  	// Select the appropriate saved option for TRENDS
+  // Select the appropriate saved option for TRENDS
 	for (var i = 0; i < trends.children.length; i++) {
 		var trendschild = trends.children[i];
 			if (trendschild.value == showTRENDS) {
@@ -36,7 +41,7 @@ function loadOptions() {
 		}
 	}
   
-  	// Select the appropriate saved option for WTF
+  // Select the appropriate saved option for WTF
 	for (var i = 0; i < wtf.children.length; i++) {
 		var wchild = wtf.children[i];
 			if (wchild.value == showWTF) {
@@ -44,15 +49,17 @@ function loadOptions() {
 			break;
 		}
 	} 
+
+ 
 }
 
 function saveOptions() {
-	var bkg = chrome.extension.getBackgroundPage();
-	var wtf = document.getElementById("whotofollow");
-  	var trends = document.getElementById("trends");
-  
-	// Save selected options to localstore
-  	bkg.setItem("showTRENDS", trends.children[trends.selectedIndex].value);
-  	bkg.setItem("showWTF", wtf.children[wtf.selectedIndex].value);
-  	document.getElementById("msg").style.visibility = "visible";
+  var bkg = chrome.extension.getBackgroundPage();
+  var wtf = document.getElementById("whotofollow");
+  var trends = document.getElementById("trends");
+
+  // Save selected options to localstore
+  bkg.setItem("showTRENDS", trends.children[trends.selectedIndex].value);
+  bkg.setItem("showWTF", wtf.children[wtf.selectedIndex].value);
+  document.getElementById("msg").style.visibility = "visible";
 }

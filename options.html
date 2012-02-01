@@ -2,50 +2,115 @@
 <head>
 	<title>Hide Twitter Guff: Options</title>
 	<script type="text/javascript" src="options.js"></script>
-	<link rel="stylesheet" href="options.css" type="text/css" charset="utf-8" />
+  <style rel="stylesheet" type="text/css">
+  body{
+  background-color:#ebeff9;
+  font-family:arial,sans-serif;
+  font-size:13px
+  }
+  
+  #content{
+  background-color:#ffffff;
+  border-color:#b5c7de;
+  border-style:solid;
+  border-width:4px;
+  margin:40px auto 20px;
+  padding:12px;
+  width:300px;
+  -webkit-border-radius:12px
+  }
+  
+  h1{
+  color:#333333;
+  font-size:1.5em;
+  margin:0.7em 0 0;
+  text-align:center
+  }
+  
+  .option_row{
+  clear:left;
+  padding: 5px;
+  }
+  
+  .option_name{
+  float:left;
+  font-weight:bold;
+  margin-top:3px;
+  width:13em
+  }
+  
+  .option_picker{
+  float:left
+  }
+  
+  .buttons{
+  clear:left;
+  padding:5px;
+  text-align: center;
+  }
+  
+  #save_status{
+  background-color:#fff1a8;
+  font-weight:bold;
+  margin-left:10px;
+  opacity:0;
+  padding:3px;
+  -webkit-border-radius:3px
+  }
+  
+  .footer{
+  text-align:center;
+  margin-top:0.4em
+  }
+  
+  #msg{
+  background: #090;
+-webkit-border-radius: 5px 5px;
+color: #fff;
+font-weight: bold;
+padding: 5px;
+text-align: center;
+  }
+  </style>
+  
 </head>
 <body onload="loadOptions()">
-	<div id="content">
-		
-		<div align="center"><img src="twit128.png" title="Hide Twitter Guff"/></div>
-		
-		<h1>Hide Twitter Guff</h1>
-  		<p>You can choose which Guff you'd like to hide (everything is hidden by default).</p>
-		<p>I haven't provided an option to show/hide the promotional stuff or the Twitter definitions... I figured no one was interested in <strong>that</strong> guff.</p>
+<div id="content">
+<div align="center"><img src="twit128.png" title="Hide Twitter Guff"/></div>
+	<h1>Hide Twitter Guff</h1>
+  <p>You can choose which Guff you'd like to hide (everything is hidden by default).</p>
+	<p>I haven't provided an option to show/hide the promotional stuff or the Twitter definitions... I figured no one was interested in <strong>that</strong> guff.</p>
 
-  		<div class="option_row">
-  			<div class="option_name">
-  				<label for="whotofollow">Who To Follow:</label>
-			</div>
-  			<div class="option_picker">
-  				<select id="whotofollow">
-					<option value="show">Show</option>
-					<option value="hide">Hide</option>
-				</select>
-  			</div>
-    	</div>
+  <div class="option_row">
+  <div class="option_name">
+  <label for="whotofollow">Who To Follow:</label></div>
+  <div class="option_picker">
+  <select id="whotofollow">
+		<option value="show">Show</option>
+		<option value="hide">Hide</option>
+	</select>
+  	</div>
+    </div>
     
-    	<div class="option_row">
-  			<div class="option_name">
-    			<label for="trends">Trends:</label>
-			</div>
-			<div class="option_picker">
-  				<select id="trends">
-					<option value="show">Show</option>					
-					<option value="hide">Hide</option>
-				</select>
-  			</div>
-    	</div>
-	
-		<div class="buttons">
-			<button onclick="saveOptions()">Save my preferences</button>
-		</div>
-            
-		<div id="msg" style="visibility: hidden;">Preferences Saved!</div>
-	</div>
+    <div class="option_row">
+  <div class="option_name">
+    <label for="trends">Trends:</label></div>
+<div class="option_picker">
+  	<select id="trends">
+		<option value="show">Show</option>
+		<option value="hide">Hide</option>
+	</select>
+  	</div>
+    </div>
 
-	<div class="footer">
-		<a href="http://github.com/happenchance/Hide-Twitter-Guff">Source Code &amp; Issue Tracker (Github)</a><br/> Paul Livingstone 2010
-	</div>
+    
+	<div class="buttons">
+
+  <button onclick="saveOptions()">Save my preferences</button></div>
+            <div id="msg" style="visibility: hidden;">Preferences Saved!<br>Refresh Twitter to see changes.</div>
+
+  </div>
+
+  <div class="footer">Paul Livingstone 2011 - <a href="http://twitter.com/happenchance">@happenchance</a></div>
 </body>
 </html>

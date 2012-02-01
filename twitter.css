@@ -1,5 +1,3 @@
-/* The usual Promotional stuff no one wants */
-
 .promo{
 	display:none !important;
 }
@@ -12,6 +10,6 @@
 	display:none !important;
 }
 
-.promoted-trend{
-	display:none !important;
+.promoted-trend, .promoted-account{
+    display:none !important;
 }

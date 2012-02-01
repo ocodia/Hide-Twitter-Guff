@@ -1,17 +1,21 @@
 {
-	"name": "Hide Twitter Guff",
-	"version": "3.14",
-	"description": "Optionally hides all the useless guff on the NEW twitter website (who to follow, trends, promotions, definitions).",
-	"icons": {
-		"128": "twit128.png",
-		"48": "twit48.png"
-	},
-	"options_page": "options.html",
-	"background_page": "background.html",
-	"content_scripts": [ {
-		"all_frames": true,
-		"js": [ "twitterstyle.js" ],
-		"css": [ "twitter.css" ],
-		"matches": [ "http://www.twitter.com/*", "https://www.twitter.com/*", "http://twitter.com/*", "https://twitter.com/*" ]
-		} ]
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "twitter.css" ],
+      "js": [ "twitterstyle.js" ],
+      "matches": [ "http://www.twitter.com/*", "https://www.twitter.com/*", "http://twitter.com/*", "https://twitter.com/*" ]
+   } ],
+   "description": "Optionally hides all the useless guff on the twitter website (who to follow, trends, promotions, definitions).",
+   "icons": {
+      "128": "twit128.png",
+      "48": "twit48.png"
+   },
+   "name": "Hide Twitter Guff",
+   "options_page": "options.html",
+   "page_action": {
+      "default_icon": "twit48.png",
+      "default_title": "Twitter Guff"
+   },
+   "version": "4.2.1"
 }
