@@ -1,6 +1,5 @@
 // Hide Twitter Guff
-// Paul Livingstone
-// 2010
+
 
 // Set SHOW variables
 var showWTF;
