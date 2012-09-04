@@ -9,7 +9,7 @@ function loadOptions() {
   
   // declare the SHOW variables and get their values from LocalStorage
 	var showWTF = bkg.getItem("showWTF");
-    var showTRENDS = bkg.getItem("showTRENDS");
+  var showTRENDS = bkg.getItem("showTRENDS");
 
   
   // the default setting is to hide the elements
@@ -63,3 +63,10 @@ function saveOptions() {
   bkg.setItem("showWTF", wtf.children[wtf.selectedIndex].value);
   document.getElementById("msg").style.visibility = "visible";
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelector('button').addEventListener('click', saveOptions);
+});
+
+window.addEventListener('load', loadOptions, false);
+
