@@ -30,13 +30,13 @@ chrome.extension.sendMessage({name: "getPreferences"},
 
     // Inject style for hiding Who To Follow 
     if (showWTF == "hide"){
-      tstyle.appendChild(document.createTextNode(".wtf-module{display:none !important;}"));
+      tstyle.appendChild(document.createTextNode(".wtf-module,.WhoToFollow{display:none !important;}"));
 
     }
   
     // Inject style for hiding Trends
     if (showTRENDS == "hide"){
-      tstyle.appendChild(document.createTextNode(".trends{display:none !important;}"));
+      tstyle.appendChild(document.createTextNode(".trends,.Trends{display:none !important;}"));
     }  
 
  
